@@ -18,6 +18,7 @@
   --text-color: #131313;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+  --purple-background-color: #efe5f5;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -91,10 +92,6 @@ header {
 header .header,
 footer .footer {
   visibility: hidden;
-}
-
-footer {
-  background-color: #efe5f5;
 }
 
 header .header[data-block-status="loaded"],
