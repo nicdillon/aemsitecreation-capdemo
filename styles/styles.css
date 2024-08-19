@@ -36,9 +36,10 @@
   --heading-font-size-m: 27px;
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 22px;
+  --gradient-background: linear-gradient(180deg, rgba(241,235,247,1) 128px, rgba(255,255,255,1) 40vh);
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 128px;
 }
 
 /* fallback fonts */
@@ -87,6 +88,32 @@ body.appear {
 
 header {
   height: var(--nav-height);
+}
+
+#nav > div.section.nav-sections {
+  background-color: #f1f5f8;
+  border-radius: 0 0 0 8px;
+  padding: 8px;
+  position: absolute;
+  top: 0; right: 0;
+  padding-right: 24px;
+  font-size: 8px !important;
+}
+
+#nav > div.section.nav-sections {
+  display: flex;
+  flex-direction: row;
+
+}
+
+#nav > div.section.nav-sections > div > p > picture > img {
+  max-height: 30px;
+  width: auto;
+}
+
+#nav > div.section.nav-brand > div > picture > img {
+  max-height: var(--nav-height);
+  width: auto;
 }
 
 header .header,
@@ -141,6 +168,10 @@ pre {
   background-color: var(--light-color);
   overflow-x: auto;
   white-space: pre;
+}
+
+body {
+  background: var(--gradient-background);
 }
 
 main > div {
