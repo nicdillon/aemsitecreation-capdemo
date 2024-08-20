@@ -16,15 +16,16 @@
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #131313;
-  --link-color: #3b63fb;
+  --link-color: rgb(2, 86, 118);
   --link-hover-color: #1d3ecf;
   --purple-background-color: #efe5f5;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --heading-font-family: 'IBM Plex Sans', roboto-condensed-fallback, sans-serif;
 
   /* body sizes */
+  --body-font-size-l: 28px;
   --body-font-size-m: 22px;
   --body-font-size-s: 19px;
   --body-font-size-xs: 17px;
@@ -90,7 +91,7 @@ header {
   height: var(--nav-height);
 }
 
-#nav > div.section.nav-sections {
+/* #nav > div.section.nav-sections {
   background-color: #f1f5f8;
   border-radius: 0 0 0 8px;
   padding: 8px;
@@ -104,7 +105,7 @@ header {
   display: flex;
   flex-direction: row;
 
-}
+} */
 
 #nav > div.section.nav-sections > div > p > picture > img {
   max-height: 30px;
@@ -188,12 +189,11 @@ button {
 /* links */
 a:any-link {
   color: var(--link-color);
-  text-decoration: none;
+  text-decoration: underline;
   word-break: break-word;
 }
 
 a:hover {
-  color: var(--link-hover-color);
   text-decoration: underline;
 }
 
@@ -286,4 +286,77 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+/* Fitness page styles */
+body > main > div.section.hero-container.columns-container > div.columns-wrapper > div > div > div.columns-img-col > picture > img {
+  max-height: 600px;
+  width: auto;
+}
+
+body > main > div.section.hero-container.columns-container > div.columns-wrapper > div > div:nth-child(1) {
+  background-color: #eee5f4;
+  border-radius: 18px;
+  padding: 20px 30px;
+}
+
+body > main > div.section.hero-container.columns-container > div.columns-wrapper > div > div:nth-child(2) {
+  background-color: #feecec;
+  padding: 20px 30px;
+  border-radius: 18px;
+  margin-top: 40px;
+}
+
+body > main > div.section.hero-container.columns-container > div.columns-wrapper > div > div:nth-child(3) {
+  background-color: #eee5f4;
+  padding: 20px 30px;
+  border-radius: 18px;
+  margin-top: 40px;
+}
+
+body > main > div.section.hero-container.columns-container > div.columns-wrapper {
+  max-width: 1500px;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+h1 {
+  font-weight: 400;
+  color: #632787;
+}
+
+h2 {
+  color: #632787;
+  font-weight: 200;
+}
+
+h3 {
+  color: #632787;
+  font-weight: 200;
+}
+
+#effective-workouts-for-every-fitness-level {
+  text-align: center;
+  padding: 0;
+  max-width: 1500px;
+}
+
+body > main > div.section.hero-container.columns-container > div:nth-child(4) {
+  text-align: center;
+  padding: 0 3vw;
+}
+
+body > main > div.section.hero-container.columns-container > div.hero-wrapper {
+  visibility: hidden;
+  height: 100px
+}
+
+body > main > div.section.hero-container.columns-container > div:nth-child(3) > div > div:nth-child(2) > div:nth-child(2) > p {
+  font-size: var(--body-font-size-l);
+  text-align: left;
+}
+
+body > main > div.section.hero-container.columns-container > div:nth-child(3) > div > div:nth-child(1) > div:nth-child(1) > p {
+  font-size: var(--body-font-size-l);
+  text-align: left;
 }
