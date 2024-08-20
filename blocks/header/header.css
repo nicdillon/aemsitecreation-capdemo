@@ -17,7 +17,7 @@ header nav {
   align-items: center;
   gap: 0 24px;
   margin: auto;
-  max-width: 1248px;
+  max-width: 1500px;
   height: var(--nav-height);
   padding: 0 24px;
   font-family: var(--body-font-family);
@@ -33,17 +33,24 @@ header nav[aria-expanded='true'] {
 }
 
 @media (width >= 900px) {
+  
   header nav {
     display: flex;
     justify-content: space-between;
     gap: 0 32px;
-    max-width: 1264px;
-    padding: 0 32px;
+    max-width: 1500px;
+    padding: 0 0px;
   }
 
   header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
+  }
+}
+
+@media (width < 1600px){
+  header nav {
+    padding: 0 3vw;
   }
 }
 
@@ -54,6 +61,22 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+  text-decoration: none;
+  font-weight: 200;
+}
+
+header nav a:hover {
+  color: purple;
+}
+
+#nav > div.section.nav-sections > div > ul > li.nav-drop > ul {
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px grey;
+}
+
+header nav a:active {
+  font-weight: bold;
+  color: purple;
 }
 
 /* hamburger */
@@ -167,8 +190,8 @@ header nav[aria-expanded='true'] .nav-sections {
 
 header nav .nav-sections ul {
   list-style: none;
-  padding-left: 0;
-  font-size: var(--body-font-size-s);
+  padding-left: 4vw;
+  font-size: var(--body-font-size-m);
 }
 
 header nav .nav-sections ul > li {
