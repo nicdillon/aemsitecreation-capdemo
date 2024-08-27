@@ -25,7 +25,7 @@
   --heading-font-family: 'IBM Plex Sans', roboto-condensed-fallback, sans-serif;
 
   /* body sizes */
-  --body-font-size-l: 28px;
+  --body-font-size-l: 26px;
   --body-font-size-m: 22px;
   --body-font-size-s: 19px;
   --body-font-size-xs: 17px;
@@ -296,8 +296,14 @@ body > main > div:nth-child(2) > div.hero-wrapper {
 
 /* Fitness page styles */
 body > main > div.section.hero-container.columns-container > div.columns-wrapper > div > div > div.columns-img-col > picture > img {
-  max-height: 600px;
+  max-height: 400px;
   width: auto;
+}
+
+body > main > div.section.hero-container.columns-container > div.columns-wrapper > div > div > div.columns-img-col > picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 body > main > div.section.hero-container.columns-container > div.columns-wrapper > div > div:nth-child(1) {
