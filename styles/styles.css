@@ -288,6 +288,12 @@ main .section.highlight {
   padding: 40px 0;
 }
 
+/* Index page styles  */
+body > main > div:nth-child(2) > div.hero-wrapper {
+  height: 100px;
+  visibility: hidden;
+}
+
 /* Fitness page styles */
 body > main > div.section.hero-container.columns-container > div.columns-wrapper > div > div > div.columns-img-col > picture > img {
   max-height: 400px;
@@ -383,10 +389,4 @@ body > main > div.section.hero-container.columns-container > div:nth-child(5) > 
   max-height: 470px;
   width: 100%;
   object-fit: cover;
-}
-
-/* Index page styles  */
-body > main > div:nth-child(2) > div.hero-wrapper {
-  height: 100px;
-  visibility: hidden;
 }
