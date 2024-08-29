@@ -136,7 +136,7 @@ function loadDelayed() {
 }
 
   // function to load carousel JS with delay
-function loadcarouselCodeJS(){
+function loadCarouselCodeJS(){
   window.setTimeout(() => import('./carouselCode.js'),2500);
 }
 
@@ -145,7 +145,7 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
-  loadcarouselCodeJS();
+  loadCarouselCodeJS();
 }
 
 loadPage();
