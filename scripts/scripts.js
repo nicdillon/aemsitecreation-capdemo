@@ -130,10 +130,16 @@ async function loadLazy(doc) {
  * without impacting the user experience.
  */
 function loadDelayed() {
-  // eslint-disable-next-line import/no-cycle
-  window.setTimeout(() => import('./delayed.js'), 3000);
+  // removed the delay timeout
+  import('./delayed.js');
   // load anything that can be postponed to the latest here
 }
+
+  // function to load mod JS with delay
+function loadmodJS(){
+  window.setTimeout(() => import('./mod.js'),2500);
+}
+
 
 async function loadPage() {
   await loadEager(document);
