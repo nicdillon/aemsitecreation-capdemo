@@ -93,7 +93,7 @@ function prev() {
     document.querySelectorAll(".mySlides")[prevSlide].style.display = "block";
 }
 
- dotcolor();
+dotcolor();
 try {
     document.querySelector("a.next").addEventListener("click", function () {
         next();
@@ -106,7 +106,6 @@ try {
 } catch (e) {
     console.log("No Previous / Next Button Found")
 }
-
 
 try {
     document.querySelector("#dot1").addEventListener("click", function () {
