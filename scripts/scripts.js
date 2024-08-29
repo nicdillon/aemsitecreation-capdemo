@@ -135,9 +135,9 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
-  // function to load mod JS with delay
-function loadmodJS(){
-  window.setTimeout(() => import('./mod.js'),2500);
+  // function to load carousel JS with delay
+function loadcarouselCodeJS(){
+  window.setTimeout(() => import('./carouselCode.js'),2500);
 }
 
 
@@ -145,7 +145,8 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  loadcarouselCodeJS();
 }
 
 loadPage();
-/** adding a comment for test
+
