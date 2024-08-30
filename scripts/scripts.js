@@ -78,6 +78,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  autolinkModals(main);
 }
 
 /**
@@ -130,8 +131,8 @@ async function loadLazy(doc) {
  * without impacting the user experience.
  */
 function loadDelayed() {
-  // eslint-disable-next-line import/no-cycle
-  window.setTimeout(() => import('./delayed.js'), 3000);
+  // removed the delay timeout
+  window.setTimeout(() => import('./delayed.js'), 500);
   // load anything that can be postponed to the latest here
 }
 
@@ -142,5 +143,3 @@ async function loadPage() {
 }
 
 loadPage();
-/** trying to add a class here
-*/
