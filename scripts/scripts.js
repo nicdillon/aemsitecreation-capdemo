@@ -78,6 +78,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  autolinkModals(main);
 }
 
 /**
@@ -131,22 +132,14 @@ async function loadLazy(doc) {
  */
 function loadDelayed() {
   // removed the delay timeout
-  import('./delayed.js');
+  window.setTimeout(() => import('./delayed.js'), 500);
   // load anything that can be postponed to the latest here
 }
-
-  // function to load carousel JS with delay
-function loadCarouselCodeJS(){
-  window.setTimeout(() => import('./carouselCode.js'),2500);
-}
-
 
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
-  loadCarouselCodeJS();
 }
 
 loadPage();
-
