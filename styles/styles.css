@@ -290,11 +290,23 @@ main .section.highlight {
 
 /* Fitness page styles */
 body > main > div.section.hero-container.columns-container > div.columns-wrapper > div > div > div.columns-img-col > picture > img {
-  max-height: 600px;
+  max-height: 400px;
   width: auto;
 }
 
 body > main > div.section.columns-container > div:nth-child(2) > div > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > main > div.section.hero-container.columns-container > div.columns-wrapper > div > div > div.columns-img-col > picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > main > div.section.hero-container.columns-container > div.columns-wrapper > div > div:nth-child(1) {
   background-color: #eee5f4;
   border-radius: 18px;
   padding: 20px 30px;
