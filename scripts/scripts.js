@@ -29,6 +29,33 @@ function buildHeroBlock(main) {
   }
 }
 
+// Target code for personalization 
+
+function initWebSDK(path, config) {
+    // Preparing the alloy queue
+    if (!window.alloy) {
+        // eslint-disable-next-line no-underscore-dangle
+        (window.__alloyNS ||= []).push('alloy');
+        window.alloy = (...args) => new Promise((resolve, reject) => {
+            window.setTimeout(() => {
+                window.alloy.q.push([resolve, reject, args]);
+            });
+        });
+        window.alloy.q = [];
+    }
+    // Loading and configuring the websdk
+    return new Promise((resolve) => {
+        import(path)
+            .then(() => window.alloy('configure', config))
+            .then(resolve);
+    });
+}
+let alloyLoadedPromise = initWebSDK('./alloy.js', {
+    datastreamId: '7ca7b9d8-642c-4f8e-b46a-a0feba2c1663',
+    orgId: 'E57736825B9A0ECF0A495D19@AdobeOrg',
+});
+
+
 /**
  * load fonts.css and set a session storage flag
  */
@@ -80,6 +107,7 @@ export function decorateMain(main) {
   decorateBlocks(main);
 }
 
+
 /**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
@@ -88,11 +116,12 @@ async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
-  if (main) {
+  if (main) 
+       {
     decorateMain(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
-  }
+  } 
 
   sampleRUM.enhance();
 
@@ -131,16 +160,19 @@ async function loadLazy(doc) {
  */
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
-  window.setTimeout(() => import('./delayed.js'), 3000);
+    import('./delayed.js');
   // load anything that can be postponed to the latest here
 }
 
+function loadModJS(){
+  window.setTimeout(() => import('./carouselCode.js'), 3000);
+}
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  loadModJS();
 }
 
 loadPage();
-/** trying to add a class here
-*/
+
