@@ -17,7 +17,7 @@ catch(e){
     console.log("No Cookie Consent Box Available!");
 }
 
-try {
+ /** try {
     import('./alloy.js');
     alloy("configure", {
         datastreamId: "7ca7b9d8-642c-4f8e-b46a-a0feba2c1663",
@@ -26,3 +26,4 @@ try {
     });
 } catch (e) {
     console.log("Error in loading Alloy JS Configuration"); }
+*/

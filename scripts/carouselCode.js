@@ -1,6 +1,4 @@
-if(document.title == 'Home | Healthy Horizons'){
-    document.querySelector("#nav > div.section.nav-sections > div > ul > li:nth-child(1) > a").style.fontWeight="bold"
-}
+
 
 
 function dotcolor() {
@@ -129,3 +127,8 @@ try {
 } catch (e) {
     console.log("Error in Dot Interaction below Carousal")
 }
+try {
+    if(document.title == 'Home | Healthy Horizons'){
+    document.querySelector("#nav > div.section.nav-sections > div > ul > li:nth-child(1) > a").style.fontWeight="bold"
+}
+} catch (e) {}
