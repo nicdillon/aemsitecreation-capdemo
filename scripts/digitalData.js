@@ -1,7 +1,7 @@
 try {
     var clickButtonName = localStorage.getItem("buttonName");
     var clickButtonHref = localStorage.getItem("buttonHref");
-    if (typeof clickButtonName != null) {
+    if (clickButtonName != null) {
         window.digitalData.clickEvent = {
             "buttonName": clickButtonName,
             "buttonHref": clickButtonHref
