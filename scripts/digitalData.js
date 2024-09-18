@@ -1,4 +1,5 @@
 try {
+    typeof window.digitalData == "undefined" ? window.digitalData = {} : console.log("DigitalData Available");
     var clickButtonName = localStorage.getItem("buttonName");
     var clickButtonHref = localStorage.getItem("buttonHref");
     if (clickButtonName != null) {

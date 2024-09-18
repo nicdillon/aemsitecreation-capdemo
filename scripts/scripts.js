@@ -29,33 +29,6 @@ function buildHeroBlock(main) {
   }
 }
 
-/**  Target code for personalization 
-
-function initWebSDK(path, config) {
-    // Preparing the alloy queue
-    if (!window.alloy) {
-        // eslint-disable-next-line no-underscore-dangle
-        (window.__alloyNS ||= []).push('alloy');
-        window.alloy = (...args) => new Promise((resolve, reject) => {
-            window.setTimeout(() => {
-                window.alloy.q.push([resolve, reject, args]);
-            });
-        });
-        window.alloy.q = [];
-    }
-    // Loading and configuring the websdk
-    return new Promise((resolve) => {
-        import(path)
-            .then(() => window.alloy('configure', config))
-            .then(resolve);
-    });
-}
-let alloyLoadedPromise = initWebSDK('./alloy.js', {
-    datastreamId: '7ca7b9d8-642c-4f8e-b46a-a0feba2c1663',
-    orgId: 'E57736825B9A0ECF0A495D19@AdobeOrg',
-});
-*/
-
 /**
  * load fonts.css and set a session storage flag
  */
@@ -105,6 +78,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  autolinkModals(main);
 }
 
 
@@ -159,24 +133,14 @@ async function loadLazy(doc) {
  * without impacting the user experience.
  */
 function loadDelayed() {
-  // eslint-disable-next-line import/no-cycle
-    import('./delayed.js');
-    //window.setTimeout(() => import('./delayed.js'), 2500);
+  window.setTimeout(() => import('./delayed.js'), 500);
   // load anything that can be postponed to the latest here
-}
-
-function loadModJS(){
-  window.setTimeout(() => import('./carouselCode.js'), 3000);
-  typeof window.digitalData == "undefined" ? window.digitalData = {} : console.log("DigitalData Available");
-  window.setTimeout(() => import('./digitalData.js'),500);
 }
 
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
-  loadModJS();
 }
 
 loadPage();
-
