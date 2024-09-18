@@ -2,6 +2,7 @@
   max-width: 1500px;
   padding-left: 3vw;
   padding-right: 3vw;
+  min-height: 400px;
 }
 
 .hero {
@@ -27,7 +28,7 @@
 }
 
 .hero img {
-  margin-top: 3vw;
+  /* margin-top: 3vw; */
   object-fit: cover;
   width: 100%;
   height: auto;
