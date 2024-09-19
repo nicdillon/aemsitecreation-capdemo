@@ -81,6 +81,7 @@ export function decorateMain(main) {
   autolinkModals(main);
 }
 
+
 /**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
@@ -89,11 +90,12 @@ async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
-  if (main) {
+  if (main) 
+       {
     decorateMain(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
-  }
+  } 
 
   sampleRUM.enhance();
 
@@ -131,7 +133,6 @@ async function loadLazy(doc) {
  * without impacting the user experience.
  */
 function loadDelayed() {
-  // removed the delay timeout
   window.setTimeout(() => import('./delayed.js'), 500);
   // load anything that can be postponed to the latest here
 }

@@ -34,7 +34,6 @@ p.changesText {
 
 .flexmainblock {
     padding-top: 20px;
-    margin-top: 40px;
     background-color: #feecec !important;
     border-radius: 20px;
 }
@@ -101,6 +100,7 @@ p {
     align-items: center;
     justify-content: space-between;
 }
+
 .additionalText {
     color: black !important;
     font-size: 25px !important;
@@ -109,7 +109,7 @@ p {
     width: 100% !important;
     text-align: left !important;
     padding: 0px 0px !important;
-    }
+}
 
 .default-content-wrapper {
     max-width: 1500px !important;
@@ -124,7 +124,6 @@ p {
 }
 
 /* CSS for the Carousal Slider */
-
 * {
     box-sizing: border-box
 }

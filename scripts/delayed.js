@@ -1,4 +1,7 @@
+
 // add delayed functionality here
+import('./digitalData.js')
+
 try {
     document.querySelector(".cookie-consent-deny").addEventListener("click", function () {
         document.querySelector("#simple-cookie-consent").style.display = "none"

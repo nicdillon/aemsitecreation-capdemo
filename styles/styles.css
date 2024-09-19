@@ -133,7 +133,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
+  margin-top: 0;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
   font-weight: 600;
@@ -154,7 +154,7 @@ ol,
 ul,
 pre,
 blockquote {
-  margin-top: 0.8em;
+  margin-top: 0;
   margin-bottom: 0.25em;
 }
 
@@ -261,13 +261,12 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 0 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: auto;
-  padding: 0 24px;
 }
 
 main > .section:first-of-type {
@@ -276,7 +275,7 @@ main > .section:first-of-type {
 
 @media (width >= 900px) {
   main > .section > div {
-    padding: 0 32px;
+    padding: 32px 0;
   }
 }
 
@@ -308,35 +307,34 @@ body > main > div.section.hero-container.columns-container > div.columns-wrapper
 
 body > main > div.section.hero-container.columns-container > div.columns-wrapper > div > div:nth-child(1) {
   background-color: #eee5f4;
-  border-radius: 18px;
+  border-radius: 12px;
   padding: 20px 30px;
 }
 
 body > main > div.section.columns-container > div:nth-child(2) > div > div:nth-child(2) {
   background-color: #feecec;
   padding: 20px 30px;
-  border-radius: 18px;
+  border-radius: 12px;
   margin-top: 40px;
 }
 
 body > main > div.section.columns-container > div.columns-wrapper > div > div:nth-child(1) {
   background-color: #eee5f4;
   padding: 20px 30px;
-  border-radius: 18px;
-  margin-top: 40px;
+  border-radius: 12px;
 }
 
 body > main > div.section.columns-container > div.columns-wrapper > div > div:nth-child(2) {
   background-color: #feeceC;
   padding: 20px 30px;
-  border-radius: 18px;
+  border-radius: 12px;
   margin-top: 40px;
 }
 
 body > main > div.section.columns-container > div.columns-wrapper > div > div:nth-child(3) {
   background-color: #eee5f4;
   padding: 20px 30px;
-  border-radius: 18px;
+  border-radius: 12px;
   margin-top: 40px;
 }
 
@@ -365,11 +363,18 @@ h3 {
   text-align: center;
   padding: 0;
   max-width: 1500px;
+  margin: 0;
 }
 
 #get-inspired-check-out-some-of-our-example-workout-plans {
   text-align: center;
-  padding: 0 3vw;
+  padding: 12px;
+  margin-bottom: 0;
+  background-color: var(--purple-background-color);
+  border-radius: 12px;
+  color: black;
+  font-weight: 600;
+  font-size: 26px;
 }
 
 body > main > div.section.columns-container > div:nth-child(2) > div > div:nth-child(1) > div:nth-child(1) > p {
