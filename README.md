@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--aemsitecreation--nicdillon.hlx.page/
-- Live: https://main--aemsitecreation--nicdillon.hlx.live/
+- Preview: https://main--aemsitecreation-capdemo--nicdillon.hlx.page/
+- Live: https://main--aemsitecreation-capdemo--nicdillon.hlx.live/
 
 ## Installation
 
