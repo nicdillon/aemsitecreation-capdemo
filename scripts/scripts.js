@@ -13,10 +13,9 @@ import {
   loadCSS,
   sampleRUM,
 } from './aem.js';
-import('./digitalData.js')
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch(new URL('https://www.google.com'))
+  import('./digitalData.js')
 });
 
 /**
