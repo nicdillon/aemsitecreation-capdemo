@@ -15,6 +15,10 @@ import {
 } from './aem.js';
 import('./digitalData.js')
 
+document.addEventListener("DOMContentLoaded", () => {
+  fetch(url('google.com'))
+});
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
