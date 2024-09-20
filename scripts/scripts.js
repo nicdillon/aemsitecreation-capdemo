@@ -16,7 +16,7 @@ import {
 import('./digitalData.js')
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch(url('google.com'))
+  fetch(new URL('https://www.google.com'))
 });
 
 /**
