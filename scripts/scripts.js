@@ -15,6 +15,7 @@ import {
 } from './aem.js';
 
 document.addEventListener("DOMContentLoaded", () => {
+  console.log('Loading digital data file')
   import('./digitalData.js')
 });
 
