@@ -133,7 +133,7 @@ async function loadLazy(doc) {
  * without impacting the user experience.
  */
 function loadDelayed() {
-  window.setTimeout(() => import('./delayed.js'), 500);
+  window.setTimeout(() => import('./delayed.js'), 1000);
   // load anything that can be postponed to the latest here
 }
 
