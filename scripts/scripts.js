@@ -14,11 +14,6 @@ import {
   sampleRUM,
 } from './aem.js';
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log('Loading digital data file')
-  import('./digitalData.js')
-});
-
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
